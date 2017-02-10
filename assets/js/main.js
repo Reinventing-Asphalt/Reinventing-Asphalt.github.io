@@ -176,7 +176,11 @@ var barWidth = 10;
 			   })
 			   .attr("width", w / dataset.length - barPadding)
 			   .attr("height", function(d) {
-			   		return d * 10;
+			   		if (d < 1) {
+			   			return 300;
+			   		} else {
+			   			return d * 10;
+			   		}
 			   })
 			   .attr("fill", function(d){
 			   		
@@ -188,7 +192,11 @@ var barWidth = 10;
 			   .enter()
 			   .append("text")
 			   .text(function(d) {
-			   		return d + " Days";
+			   		if (d < 1) {
+			   			return ">1 Day"
+			   		} else {
+			   			return d + " Days"
+			   		}
 			   })
 			   .attr("text-anchor", "middle")
 			   .attr("x", function(d, i) {
