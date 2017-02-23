@@ -97,8 +97,12 @@ var barWidth = 10;
 			   		return d * 3;
 			   })
 			   .attr("fill", function(d){
+			   		if (d > 160) {
+			   			return "rgb(142,35,35)";
+			   		} else {
+			   			return "rgb(47,79,79)";
+			   		}
 			   		
-			   		return "rgb(" + ((d - 80) * 1.2) + ", 0, " + ((255 - d) * 2) + ")";
 			   });
 
 			svg.selectAll("text")
@@ -143,7 +147,7 @@ var barWidth = 10;
 			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
 			   })
 			   .attr("y", function(d) {
-			   		return h - (d * 1.5) + 56
+			   		return h - (d * 1.5) + 56;
 			   })
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "16px")
@@ -156,7 +160,7 @@ var barWidth = 10;
 			var barPadding = 100;
 			var barID = ["CRMA", "TB"];
 			
-			var dataset = [ 0.5, 30];
+			var dataset = [ 0.5, 90];
 			
 			//Create SVG element
 			var svg = d3.select("#shelfChart")
@@ -172,7 +176,7 @@ var barWidth = 10;
 			   		return i * (w / dataset.length);
 			   })
 			   .attr("y", function(d) {
-			   		return h - (d * 10);
+			   		return h - (d * 3.5);
 			   })
 			   .attr("width", w / dataset.length - barPadding)
 			   .attr("height", function(d) {
@@ -183,8 +187,11 @@ var barWidth = 10;
 			   		}
 			   })
 			   .attr("fill", function(d){
-			   		
-			   		return "rgb(" + ((d - 80) * 1.2) + ", 0, " + ((255 - d) * 2) + ")";
+			   		if (d < 10) {
+			   			return "rgb(142,35,35)";
+			   		} else {
+			   			return "rgb(47,79,79)";
+			   		}
 			   });
 
 			svg.selectAll("text")
@@ -193,9 +200,11 @@ var barWidth = 10;
 			   .append("text")
 			   .text(function(d) {
 			   		if (d < 1) {
-			   			return ">1 Day"
+			   			return ">1 Day";
+			   		} else if(d == 90) {
+			   			return "Over 3 Months";
 			   		} else {
-			   			return d + " Days"
+			   			return d + " Days";
 			   		}
 			   })
 			   .attr("text-anchor", "middle")
@@ -223,14 +232,68 @@ var barWidth = 10;
 			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
 			   })
 			   .attr("y", function(d) {
-			   		return h - (d * 1.5) + 24
+			   		return h - (d * 1.5) + 24;
 			   })
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "16px")
 			   .attr("fill", "white");
 
+//modal javascript
+var crmamodal = document.getElementById('crmaModal');
+var crmabtn = document.getElementById("crmaModalButton");
+var crmaspan = document.getElementById("crmaClose");
 
+crmabtn.onclick = function() {
+    crmamodal.style.display = "block";
+};
 
+crmaspan.onclick = function() {
+    crmamodal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == crmamodal) {
+        crmamodal.style.display = "none";
+    }
+};
+
+var mixmodal = document.getElementById('mixModal');
+var mixbtn = document.getElementById("mixModalButton");
+var mixspan = document.getElementById("mixClose");
+
+mixbtn.onclick = function() {
+    mixmodal.style.display = "block";
+};
+
+mixspan.onclick = function() {
+    mixmodal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == mixmodal) {
+        mixmodal.style.display = "none";
+    }
+}
+
+var xmodal = document.getElementById('xModal');
+var xbtn = document.getElementById("xModalButton");
+var xspan = document.getElementById("xClose");
+
+xbtn.onclick = function() {
+    xmodal.style.display = "block";
+};
+
+xspan.onclick = function() {
+    xmodal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == xmodal) {
+        xmodal.style.display = "none";
+    }
+}
+
+jQuery.noConflict();
 (function($) {
 
 	skel

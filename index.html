@@ -120,7 +120,7 @@
 										</div>
 										<div class="6u 12u(mobile)">
 											<section>
-												<h3 class="icon ">New TB Asphalt Rubber wth Warm Mix Additives</h3>
+												<h3 class="icon ">New TB Asphalt Rubber with Warm Mix Additives</h3>
 												<div>
 													<img id="mixTB" src="http://www.heartlandasphalt.com/ESW/Images/asphalt.jpg">
 												</div>
@@ -166,7 +166,7 @@
 												<ul class="materials lbl">
 													<li>Bitumen</li>
 													<li>Crumb Rubber</li>
-													<li>Agregate (Gravel, Rock, etc.)</li>
+													<li>Aggregate (Gravel, Rock, etc.)</li>
 												</ul>
 											</section>
 										</div>
@@ -174,10 +174,10 @@
 											<section>
 												<h3 class="icon fa-pie-chart">Materials (TB)</h3>
 												<ul class="materials lbl">
-													<li>Bitumin</li>
+													<li>Bitumen</li>
 													<li>TB Asphalt Rubber (Fine Rubber Grains)</li>
 													<li>Sasobit Wax</li>
-													<li>Agregate</li>
+													<li>Aggregate</li>
 													<li></li>
 												</ul>
 											</section>
@@ -187,6 +187,7 @@
 										<div class="6u 12u(mobile)">
 											<section>
 												<h3 class="icon fa-thermometer-empty">Working Temperature</h3>
+												<img height="80px" src="images/label.jpg">
 												<div id="tempChart" style="height:400; width:480;"></div>
 													<p><strong>Working Temperature</strong></p>
 													<p><span id="value">Higher temperatures are more expensive</span></p>
@@ -195,6 +196,7 @@
 										<div class="6u 12u(mobile)">
 											<section>
 												<h3 class="icon fa-clock-o">Shelf Life</h3>
+												<img height="80px" src="images/label.jpg">
 												<div id="shelfChart" style="height:400; width:480;"></div>
 													<p><strong>Shelf Life</strong></p>
 													<p><span id="value">Recrystallization of Sasobit wax stabilizes TB</span></p>
@@ -202,10 +204,6 @@
 										</div>
 									</div>
 								</div>
-								<ul class="actions actions-centered">
-							<!--	<li><a href="#" class="button style1 big">Get Started</a></li>
-									<li><a href="#" class="button style2 big">More Info</a></li> -->
-								</ul>
 							</section>
 
 					</div>
@@ -222,8 +220,24 @@
 									<h3><a href="#">Crumb Rubber (CRMA)</a></h3>
 									<p>Discarded rubber tyres are recycled from landfills to be ground down into a fine powder.  This powder, when added to an asphalt mix (CRMA) will <strong>increase its stiffness.</strong>  However, this mix suffers <strong>2 major disadvantages.</strong></p>
 									<ul class="actions">
-										<li>CRMA requires a high temperature for production.  This is expensive and creates noxious fumes.</li>
+										<li><button class="button style1" id="crmaModalButton">Learn More</button></li>
 									</ul>
+								<!-- The Modal -->
+									<div id="crmaModal" class="modal">
+										<div class="modal-content">
+											<div class="modal-header">
+												<span id="crmaClose" class="close">&times;</span>
+												<h2>Crumb Rubber (CRMA)</h2>
+											</div>
+											<div class="modal-body">
+												<ul>
+													<li>CRMA requires a high temperature for production.  This is expensive and creates noxious fumes.</li>
+													<li>CRMA asphalt mixes have an extremely limited shelf life.  If not used, it degrades in under a day.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								<!-- End of first modal -->
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
@@ -232,8 +246,24 @@
 									<h3><a href="#">The Mixing</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><button class="button style1" id="mixModalButton">Learn More</button></li>
 									</ul>
+									<!-- The Modal -->
+									<div id="mixModal" class="modal">
+										<div class="modal-content">
+											<div class="modal-header">
+												<span id="mixClose" class="close">&times;</span>
+												<h2>The Mixing</h2>
+											</div>
+											<div class="modal-body">
+												<ul>
+													<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna fermentum, laoreet augue.</li>
+													<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat elementum ante ut tincidunt.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								<!-- End of second modal -->
 								</section>
 							</div>
 
@@ -243,8 +273,24 @@
 									<h3><a href="#">Mattis tempus lorem</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><button class="button style1" id="xModalButton">Learn More</button></li>
 									</ul>
+									<!-- The Modal -->
+									<div id="xModal" class="modal">
+										<div class="modal-content">
+											<div class="modal-header">
+												<span id="xClose" class="close">&times;</span>
+												<h2>Lorem ipsum</h2>
+											</div>
+											<div class="modal-body">
+												<ul>
+													<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut magna fermentum, laoreet augue.</li>
+													<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat elementum ante ut tincidunt.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								<!-- End of third modal -->
 								</section>
 							</div>
 						</div>
@@ -333,10 +379,7 @@
 											</div>
 											<div class="row">
 												<div class="12u">
-													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" /></li>
-														<li><input type="reset" class="style2" value="Reset" /></li>
-													</ul>
+
 												</div>
 											</div>
 										</form>

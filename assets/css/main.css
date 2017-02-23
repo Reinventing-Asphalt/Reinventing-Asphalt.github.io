@@ -7,6 +7,53 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Modal CSS */
+.modal-header {
+	padding: 2px 16px;
+	background-color: #484d55;
+}
+.modal-body {
+	padding: 2px 16px;
+}
+/* Applies to entire modal */
+.modal {
+    display: none;
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+/* Modal Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*Stuff*/
 #mixCRMA {
 	border: 1em solid #eeeeee;
@@ -1158,6 +1205,10 @@ rect:hover {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
 		color: #484d55;
+	}
+
+	.modal-header h2 {
+		color: white;
 	}
 
 		a, h2 a, h3 a, h4 a, h5 a, h6 a {
