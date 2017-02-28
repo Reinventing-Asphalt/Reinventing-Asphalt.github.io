@@ -200,7 +200,7 @@ var barWidth = 10;
 			   .append("text")
 			   .text(function(d) {
 			   		if (d < 1) {
-			   			return ">1 Day";
+			   			return "<1 Day";
 			   		} else if(d == 90) {
 			   			return "Over 3 Months";
 			   		} else {
@@ -273,7 +273,7 @@ window.onclick = function(event) {
     if (event.target == mixmodal) {
         mixmodal.style.display = "none";
     }
-}
+};
 
 var xmodal = document.getElementById('xModal');
 var xbtn = document.getElementById("xModalButton");
@@ -291,7 +291,7 @@ window.onclick = function(event) {
     if (event.target == xmodal) {
         xmodal.style.display = "none";
     }
-}
+};
 
 jQuery.noConflict();
 (function($) {
@@ -384,3 +384,4 @@ jQuery.noConflict();
 	});
 
 })(jQuery);
+main();
