@@ -54,6 +54,7 @@
 									<!-- Logo -->
 									<div id="logo">
 										<h1><a href="index.html" style="color: yellow>">Reinventing Asphalt</a></h1>
+										<a href="https://www.polyu.edu.hk"><img width="25%" src="images/polyu_logo.png" alt="" /></a>
 										<p>Scroll Down For More</p>
 									</div>
 								</div>
@@ -213,7 +214,7 @@
 
 			<!-- Highlights -->
 				<div class="wrapper style3">
-					<div class="title">The Ingredients</div>
+					<div class="title">Extra Information</div>
 					<div id="highlights" class="container">
 						<div class="row 150%">
 							<div class="4u 12u(mobile)">
@@ -296,6 +297,31 @@
 								</section>
 							</div>
 						</div>
+						<div style="text-align: center;"">
+							<h1 style="font-size: 1.8rem; padding-top:4rem;">The Trial Project</h1>
+							<p style="font-size: 1.2rem; padding-top:1rem">
+								The information displayed on this website was gathered in a trial project on the asphalt mixes.<br />
+								In the trial project, three test roads were constructed out of the mixes in cold temperatures to test the mix's working temperature.
+								Samples were taken from the road and tested in a lab.  Below are some photos taken from the project.
+							</p>
+						</div>
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+								<secion class="highlight">
+									<div class="image featured"><img width="400rem" src="images/trial1.png"></div>
+								</secion>
+							</div>
+							<div class="4u 12u(mobile)">
+								<secion class="highlight">
+									<div class="image featured"><img width="400rem" src="images/trial2.png"></div>
+								</secion>
+							</div>
+							<div class="4u 12u(mobile)">
+								<secion class="highlight">
+									<div class="image featured"><img width="400rem" src="images/trial3.png"></div>
+								</secion>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -322,7 +348,7 @@
 												<section>
 													<h3 class="icon fa-comment">Websites</h3>
 													<p>
-														<a href="http://www.zn903.com/ceyhwang/">zn903.com/ceyhwang/</a><br />
+														<a class="hoverlink" href="http://www.zn903.com/ceyhwang/">zn903.com/ceyhwang/</a><br />
 													</p>
 												</section>
 											</div>
@@ -352,9 +378,16 @@
 											<div class="6u 12u(mobile)">
 												<section>
 													<h3 class="icon fa-envelope">Email</h3>
-													<p>
-														<a href="#">ceyhwang@polyu.edu.hk</a>
-													</p>
+														<p
+														id="email"
+														onclick="copy(document.getElementById('email').innerHTML)"
+														class="hoverlink">ceyhwang@polyu.edu.hk
+														</p>
+														<script type="text/javascript">
+															function copy(text) {
+																window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+															}
+														</script>
 												</section>
 											</div>
 										</div>

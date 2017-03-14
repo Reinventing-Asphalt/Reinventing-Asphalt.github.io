@@ -1222,7 +1222,6 @@ rect:hover {
 		-ms-transition: color .25s ease-in-out;
 		transition: color .25s ease-in-out;
 		text-decoration: underline;
-		color: #717479;
 	}
 
 		a:hover {
@@ -1752,7 +1751,7 @@ rect:hover {
 		color: rgba(255, 255, 255, 0.5);
 	}
 
-		#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3, #footer-wrapper h4, #footer-wrapper h5, #footer-wrapper h6, #footer-wrapper strong, #footer-wrapper b, #footer-wrapper a {
+		#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3, #footer-wrapper h4, #footer-wrapper h5, #footer-wrapper h6, #footer-wrapper strong, #footer-wrapper b{
 			color: #fff;
 		}
 
@@ -2668,3 +2667,16 @@ rect:hover {
 						}
 
 	}
+
+/* contact info hover */
+.hoverlink {
+   -moz-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   -webkit-transition: all 0.3s;
+   transition: all 0.3s;
+   text-decoration: none;
+}
+
+.hoverlink:hover {
+	color: yellow;
+}
